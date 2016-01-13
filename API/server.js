@@ -11,7 +11,7 @@ var db = require('./config/config');
 // check data conection
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 app.use(bodyParser.json());
-var port = process.env.PORT || 8008;
+var port = process.env.PORT || 8007;
 mongoose.connect(db.url, function (err) {
     if (err) {
         console.log(err);
