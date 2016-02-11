@@ -1,0 +1,51 @@
+﻿<ion-header-bar class="bar-positive">
+    <button class="button button-icon icon ion-grid" ng-click="showMenu()"></button>
+    <button class="button button-clear">
+        <span>تسجيل خروج</span>&nbsp;|&nbsp;<span>Amir</span>
+    </button>
+</ion-header-bar>
+
+<ion-content>
+
+    <div class="padding row row-center">
+        <div class="list-borderless col">
+            <label class="item item-input item-floating-label padding">
+                <span class="input-label">اسم المريض</span>
+                <input type="text" placeholder="اسم المريض">
+            </label>
+        </div>
+        <div class="col-33 text-center">
+            <img class="circle" ng-src="../images/unknown.png" />
+        </div>
+    </div>
+
+    <div class="list">
+        <label class="item item-input item-floating-label padding">
+            <span class="input-label">وصف الحالة</span>
+            <textarea type="text" rows="5" placeholder="وصف الحالة"></textarea>
+        </label>
+        <label class="item item-input item-stacked-label padding">
+            <span class="input-label">تاريخ الميلاد</span>
+            <input type="date" class="text-right" placeholder="تاريخ الميلاد">
+        </label>
+
+
+
+        <label class="item item-input item-stacked-label padding">
+            <span class="input-label">النوع</span>
+            <select>
+                <option selected>ذكر</option>
+                <option>انثي</option>
+            </select>
+        </label>
+
+    </div>
+</ion-content>
+
+
+<ion-footer-bar class="bar-positive">
+    <div class="button-bar">
+        <button class="button button-icon icon ion-close-round" ng-click="showAccounts()"></button>
+        <button class="button button-icon icon ion-checkmark-round" ng-click="showAccounts()"></button>
+    </div>
+</ion-footer-bar>
