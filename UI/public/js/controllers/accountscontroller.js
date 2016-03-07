@@ -7,4 +7,7 @@
     $scope.addAccount = function () {
         $state.go('addaccount');
     }
-});
+    $scope.logout = function () {
+        $state.go('login');
+    }
+}); 

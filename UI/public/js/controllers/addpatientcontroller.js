@@ -7,4 +7,7 @@
     $scope.showAccounts = function () {
         $state.go('listpatients');
     }
+    $scope.logout = function () {
+        $state.go('login');
+    }
 });

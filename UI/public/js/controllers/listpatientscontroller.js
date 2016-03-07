@@ -10,4 +10,7 @@
     $scope.addPatient = function () {
         $state.go('addpatient');
     }
+    $scope.logout = function () {
+        $state.go('login');
+    }
 });

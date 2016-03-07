@@ -1,53 +1,55 @@
 ﻿<div class="viewpatientPage">
     <ion-header-bar class="bar-positive">
         <button class="button button-icon icon ion-grid" ng-click="showMenu()"></button>
-        <button class="button button-clear">
-            <span>تسجيل خروج</span>&nbsp;|&nbsp;<span>Amir</span>
-        </button>
+        <div class="adjustHeader">
+            <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()">تسجيل خروج</span>
+        </div>
     </ion-header-bar>
 
     <ion-content ng-hide="addNote">
-        <div class="padding row row-center">
-            <div class="col-20">
-                <div class="item-avatar">
-                    <img src="../images/unknown.png" />
+        <ion-scroll direction="y">
+            <div class="padding row row-center">
+                <div class="col-20">
+                    <div class="item-avatar">
+                        <img src="../images/unknown.png" />
+                    </div>
                 </div>
-            </div>
-            <div class="col-80">
-                <h3 class="padding-bottom">علي سالم حسين</h3>
-                <p>ارتفاع نسبه السكر في الدم</p>
-            </div>
-        </div>
-
-        <div class="list">
-            <div class="card">
-                <div class="item item-text-wrap">
-                    <h4 class="padding-bottom">02-01-2015</h4>
-                    <p>قياس الضغط و نسبه السكر في الدم</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="item item-text-wrap">
-                    <h4 class="padding-bottom">05-05-2006</h4>
+                <div class="col-80">
+                    <h3 class="padding-bottom">علي سالم حسين</h3>
                     <p>ارتفاع نسبه السكر في الدم</p>
                 </div>
             </div>
-            <!--card with attach-->
-            <div class="card">
-                <div class="item item-text-wrap">
-                    <div class="row">
-                        <div class="col">
-                            <button class="button button-icon icon ion-paperclip pull-left"></button>
-                        </div>
-                        <div class="col-90">
-                            <h4 class="padding-bottom h2">06-07-2008</h4>
-                            <p>ضغط مرتفع و عدم انتظام ضربات القلب</p>
+
+            <div class="list">
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        <h4 class="padding-bottom">02-01-2015</h4>
+                        <p>قياس الضغط و نسبه السكر في الدم</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        <h4 class="padding-bottom">05-05-2006</h4>
+                        <p>ارتفاع نسبه السكر في الدم</p>
+                    </div>
+                </div>
+                <!--card with attach-->
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        <div class="row">
+                            <div class="col">
+                                <button class="button button-icon icon ion-paperclip pull-left"></button>
+                            </div>
+                            <div class="col-90">
+                                <h4 class="padding-bottom h2">06-07-2008</h4>
+                                <p>ضغط مرتفع و عدم انتظام ضربات القلب</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+        </ion-scroll>
     </ion-content>
 
     <ion-footer-bar class="bar-positive" ng-hide="addNote">
@@ -61,34 +63,36 @@
 
 
     <ion-content ng-show="addNote">
-        <div class="padding row row-center">
-            <div class="col-20">
-                <div class="item-avatar">
-                    <img src="../images/unknown.png" />
-                </div>
-            </div>
-            <div class="col-80">
-                <h3 class="padding-bottom">علي سالم حسين</h3>
-                <p>ارتفاع نسبه السكر في الدم</p>
-            </div>
-        </div>
-
-        <div class="view-container">
-            <div class="item card">
-
-                <label class="item item-input item-floating-label">
-                    <span class="input-label">ملاحظة</span>
-                    <textarea type="text" rows="5" placeholder="ملاحظة"></textarea>
-                </label>
-
-                <div class="row row-center">
-                    <div class="col">
-                        <button class="button button-icon icon ion-paperclip button-block"></button>
+        <ion-scroll direction="y">
+            <div class="padding row row-center">
+                <div class="col-20">
+                    <div class="item-avatar">
+                        <img src="../images/unknown.png" />
                     </div>
                 </div>
+                <div class="col-80">
+                    <h3 class="padding-bottom">علي سالم حسين</h3>
+                    <p>ارتفاع نسبه السكر في الدم</p>
+                </div>
             </div>
 
-        </div>
+            <div class="view-container">
+                <div class="item card">
+
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">ملاحظة</span>
+                        <textarea type="text" rows="5" placeholder="ملاحظة"></textarea>
+                    </label>
+
+                    <div class="row row-center">
+                        <div class="col">
+                            <button class="button button-icon icon ion-paperclip button-block"></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </ion-scroll>
     </ion-content>
 
     <ion-footer-bar class="bar-positive" ng-show="addNote">

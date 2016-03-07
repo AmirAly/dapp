@@ -4,4 +4,7 @@
     $scope.showMenu = function () {
         $state.go('menu');
     }
+    $scope.logout = function () {
+        $state.go('login');
+    }
 });

@@ -1,32 +1,34 @@
-﻿    <ion-header-bar class="bar-positive">
-        <button class="button button-icon icon ion-grid" ng-click="showMenu()"></button>
-        <button class="button button-clear">
-            <span>تسجيل خروج</span>&nbsp;|&nbsp;<span>Amir</span>
-        </button>
-    </ion-header-bar>
+﻿<ion-header-bar class="bar-positive">
+    <button class="button button-icon icon ion-grid" ng-click="showMenu()"></button>
+    <div class="adjustHeader">
+        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()">تسجيل خروج</span>
+    </div>
+</ion-header-bar>
 
     <ion-content>
-        <div class="padding row row-center">
-            <div class="col text-center">
-                <img class="circle" ng-src="../images/unknown.png" />
+        <ion-scroll direction="y">
+            <div class="padding row row-center">
+                <div class="col text-center">
+                    <img class="circle" ng-src="../images/unknown.png" />
+                </div>
             </div>
-        </div>
 
-        <div class="list">
-            <label class="item item-input item-floating-label padding">
-                <span class="input-label">اسم المساعد</span>
-                <input type="text" placeholder="اسم المساعد">
-            </label>
-            <label class="item item-input item-floating-label padding">
-                <span class="input-label">التخصص</span>
-                <input type="text" placeholder="التخصص">
-            </label>
-            <label class="item item-input item-floating-label padding">
-                <span class="input-label">كلمة المرور</span>
-                <input type="password" placeholder="كلمة المرور">
-            </label>
+            <div class="list">
+                <label class="item item-input item-floating-label padding">
+                    <span class="input-label">اسم المساعد</span>
+                    <input type="text" placeholder="اسم المساعد">
+                </label>
+                <label class="item item-input item-floating-label padding">
+                    <span class="input-label">التخصص</span>
+                    <input type="text" placeholder="التخصص">
+                </label>
+                <label class="item item-input item-floating-label padding">
+                    <span class="input-label">كلمة المرور</span>
+                    <input type="password" placeholder="كلمة المرور">
+                </label>
 
-        </div>
+            </div>
+        </ion-scroll>
     </ion-content>
 
 

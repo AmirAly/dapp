@@ -7,4 +7,7 @@
     $scope.showAccounts = function () {
         $state.go('accounts');
     }
+    $scope.logout = function () {
+        $state.go('login');
+    }
 });

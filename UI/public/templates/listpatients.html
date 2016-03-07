@@ -1,59 +1,60 @@
 ﻿<ion-header-bar class="bar-positive">
     <button class="button button-icon icon ion-grid" ng-click="showMenu()"></button>
-    <button class="button button-clear">
-        <span>تسجيل خروج</span>&nbsp;|&nbsp;<span>Amir</span>
-    </button>
+    <div class="adjustHeader">
+        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()">تسجيل خروج</span>
+    </div>
 </ion-header-bar>
 
-<ion-content>
-    <ion-list>
-        <ion-item class="item-input-inset">
-            <a class="button button-icon icon ion-search padding-right"></a>
-            <label class="item-input-wrapper padding-left">
-                <input type="text" placeholder="بحث">
-            </label>
-        </ion-item>
-    </ion-list>
+<ion-content class="listPatients">
+    <ion-scroll direction="y">
+        <ion-list>
+            <ion-item class="item-input-inset">
+                <a class="button button-icon icon ion-search padding-right"></a>
+                <label class="item-input-wrapper padding-left">
+                    <input type="text" placeholder="بحث">
+                </label>
+            </ion-item>
+        </ion-list>
 
-    <div class="list">
-        <div class="card" ng-click="getPatientDetails()">
-            <div class="item item-text-wrap item-avatar">
-                <img src="../images/unknown.png" />
-                <h2 class="padding-bottom">علي سالم حسين</h2>
-                <p>ارتفاع نسبه السكر في الدم ارتفاع نسبه السكر في الدم ارتفاع نسبه السكر في الدم ارتفاع نسبه السكر في الدم</p>
-            </div>
+        <div class="list">
+            <div class="card" ng-click="getPatientDetails()">
+                <div class="item item-text-wrap item-avatar">
+                    <img src="../images/unknown.png" />
+                    <h2 class="padding-bottom">علي سالم حسين</h2>
+                    <p>ارتفاع نسبه السكر في الدم ارتفاع نسبه السكر في الدم ارتفاع نسبه السكر في الدم ارتفاع نسبه السكر في الدم</p>
+                </div>
 
-        </div>
-        <div class="card" ng-click="getPatientDetails()">
-            <div class="item item-text-wrap item-avatar">
-                <img src="../images/unknown.png" />
-                <h2 class="padding-bottom">علي سالم حسين</h2>
-                <p>ارتفاع نسبه السكر في الدم</p>
+            </div>
+            <div class="card" ng-click="getPatientDetails()">
+                <div class="item item-text-wrap item-avatar">
+                    <img src="../images/unknown.png" />
+                    <h2 class="padding-bottom">علي سالم حسين</h2>
+                    <p>ارتفاع نسبه السكر في الدم</p>
+                </div>
+            </div>
+            <div class="card" ng-click="getPatientDetails()">
+                <div class="item item-text-wrap item-avatar">
+                    <img src="../images/unknown.png" />
+                    <h2 class="padding-bottom">علي سالم حسين</h2>
+                    <p>ارتفاع نسبه السكر في الدم</p>
+                </div>
+            </div>
+            <div class="card" ng-click="getPatientDetails()">
+                <div class="item item-text-wrap item-avatar">
+                    <img src="../images/unknown.png" />
+                    <h2 class="padding-bottom">علي سالم حسين</h2>
+                    <p>ارتفاع نسبه السكر في الدم</p>
+                </div>
+            </div>
+            <div class="card" ng-click="getPatientDetails()">
+                <div class="item item-text-wrap item-avatar">
+                    <img src="../images/unknown.png" />
+                    <h2 class="padding-bottom">علي سالم حسين</h2>
+                    <p>ارتفاع نسبه السكر في الدم</p>
+                </div>
             </div>
         </div>
-        <div class="card" ng-click="getPatientDetails()">
-            <div class="item item-text-wrap item-avatar">
-                <img src="../images/unknown.png" />
-                <h2 class="padding-bottom">علي سالم حسين</h2>
-                <p>ارتفاع نسبه السكر في الدم</p>
-            </div>
-        </div>
-        <div class="card" ng-click="getPatientDetails()">
-            <div class="item item-text-wrap item-avatar">
-                <img src="../images/unknown.png" />
-                <h2 class="padding-bottom">علي سالم حسين</h2>
-                <p>ارتفاع نسبه السكر في الدم</p>
-            </div>
-        </div>
-        <div class="card" ng-click="getPatientDetails()">
-            <div class="item item-text-wrap item-avatar">
-                <img src="../images/unknown.png" />
-                <h2 class="padding-bottom">علي سالم حسين</h2>
-                <p>ارتفاع نسبه السكر في الدم</p>
-            </div>
-        </div>
-    </div>
-
+    </ion-scroll>
 
 </ion-content>
 

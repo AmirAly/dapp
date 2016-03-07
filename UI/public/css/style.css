@@ -5,8 +5,7 @@
     src: url(../fonts/DroidKufi-Regular.woff) format('woff');
 }
 
-
-input, button, textarea, span, label, p, h1, h2, h3, h4, h5, h6, select {
+input, button, textarea, span, label, p, h1, h2, h3, h4, h5, h6, select, .menuPage {
     direction: rtl !important;
 }
 
@@ -14,12 +13,27 @@ body, input, button, textarea, span, label, p, h1, h2, h3, h4, h5, h6, select {
     font-family: 'Droid Arabic Kufi' !important;
 }
 
+    input[type=date] {
+        text-align: right;
+    }
+
 .pull-left {
     float: left !important;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .viewpatientPage h3 {
     font-size: 24px;
+}
+.adjustHeader{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 5px;
+    font-size: 17px;
 }
 
 .circle {
@@ -31,4 +45,41 @@ body, input, button, textarea, span, label, p, h1, h2, h3, h4, h5, h6, select {
 select {
     /*padding: 6px 0px 9px 40px;*/
     border: none;
+}
+
+textarea {
+    padding-right: 24px;
+    resize: none;
+}
+
+ion-scroll[direction=y] {
+    height: calc(100vh - 33px - 33px - 15px);
+}
+
+/*target firefox only*/
+@-moz-document url-prefix() {
+    ion-scroll[direction=y] {
+        overflow-y: scroll !important;
+    }
+}
+
+/*list patient page*/
+.listPatients .item-avatar > img:first-child {
+    right: 16px;
+    left: initial;
+}
+
+.listPatients .item-avatar {
+    padding-right: 72px;
+    padding-left: initial;
+}
+
+/*Menu*/
+.menuPage .adjustMenu {
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.menuPage ion-scroll[direction=y] {
+    height: 100vh;
 }

@@ -1,45 +1,46 @@
 ﻿<ion-header-bar class="bar-positive">
     <button class="button button-icon icon ion-grid" ng-click="showMenu()"></button>
-    <button class="button button-clear">
-        <span>تسجيل خروج</span>&nbsp;|&nbsp;<span>Amir</span>
-    </button>
+    <div class="adjustHeader">
+        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()">تسجيل خروج</span>
+    </div>
 </ion-header-bar>
 
 <ion-content>
-    <div class="padding">
-        <h2 class="text-right padding">المساعدين</h2>
-    </div>
-
-    <div class="list">
-
-        <div class="item item-input-inset">
-            <button class="button button-icon icon ion-plus-round col-33"></button>
-            <label class="item-input-wrapper">
-                <input type="text" placeholder="اسم المساعد">
-            </label>
-            
+    <ion-scroll direction="y">
+        <div class="padding">
+            <h2 class="text-right padding">المساعدين</h2>
         </div>
-    </div>
 
-    <div class="padding">
-        <div class="row row-center">
-            <div class="col text-center">
-                <button class="button button-icon icon ion-minus-round"></button>
+        <div class="list">
+
+            <div class="item item-input-inset">
+                <button class="button button-dark button-clear icon ion-plus-round col-33"></button>
+                <label class="item-input-wrapper">
+                    <input type="text" placeholder="اسم المساعد">
+                </label>
+
             </div>
-            <div class="col-66">
+        </div>
+
+        <div class="padding">
+            <div class="row row-center">
+                <div class="col text-center">
+                    <button class="button button-dark button-clear icon ion-minus-round"></button>
+                </div>
+                <div class="col-66">
                     <h4>احمد علاءالحسينى</h4>
+                </div>
             </div>
-        </div>
-        <div class="row row-center">
-            <div class="col text-center">
-                <button class="button button-icon icon ion-minus-round"></button>
-            </div>
-            <div class="col-66">
+            <div class="row row-center">
+                <div class="col text-center">
+                    <button class="button button-dark button-clear icon ion-minus-round"></button>
+                </div>
+                <div class="col-66">
                     <h4>علي حسن السيد</h4>
+                </div>
             </div>
         </div>
-    </div>
-
+    </ion-scroll>
 </ion-content>
 
 

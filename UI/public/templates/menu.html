@@ -1,37 +1,35 @@
 ﻿<ion-header-bar class="bar-positive">
     <button class="button button-icon icon"></button>
-    <button class="button button-clear">
-        <span>تسجيل خروج</span>&nbsp;|&nbsp;<span>Amir</span>
-    </button>
-</ion-header-bar>
-<ion-content>
-
-    <div class="list">
-
-        <a class="item item-avatar" ng-click="showListPatient()" >
-            <img src="../images/unknown.png">
-            <h2>المرضي</h2>
-        </a>
-
-        <a class="item item-avatar" ng-click="showListAccounts()">
-            <img src="../images/unknown.png">
-            <h2>المساعدين</h2>
-        </a>
-
-        <a class="item item-avatar">
-            <img src="../images/unknown.png">
-            <h2>المواعيد</h2>
-        </a>
-
-        <a class="item item-avatar">
-            <img src="../images/unknown.png">
-            <h2>الماليات</h2>
-        </a>
-
+    <div class="adjustHeader">
+        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()">تسجيل خروج</span>
     </div>
+</ion-header-bar>
+<ion-content class="menuPage">
 
+    <ion-scroll direction="y">
 
+        <div class="row row-bottom padding">
+            <div class="col col-25 text-center padding"><img class="full-image" src="images/1.png" ng-click="showListPatient()"><span>المرضي</span></div>
+            <div class="col col-25 text-center padding"><img class="full-image" src="images/2.png" ng-click="showListAccounts()"><span>المساعدين</span></div>
+            <div class="col col-25 text-center padding"><img class="full-image" src="images/4.png"><span>المواعيد</span></div>
+            <div class="col col-25 text-center padding"><img class="full-image" src="images/3.png"><span>الماليات</span></div>
+        </div>
+        <div class="row row-bottom padding">
+            <div class="col col-25 text-center padding"><img class="full-image" src="images/1.png" ng-click="showListPatient()"><span>المرضي</span></div>
+            <div class="col col-25 text-center padding"><img class="full-image" src="images/2.png" ng-click="showListAccounts()"><span>المساعدين</span></div>
+            <div class="col col-25 text-center padding"><img class="full-image" src="images/4.png"><span>المواعيد</span></div>
+            <div class="col col-25 text-center padding"><img class="full-image" src="images/3.png"><span>الماليات</span></div>
+        </div>
+
+        <!--<div class="row row-bottom adjustMenu">
+            <div class="col col-25" ng-repeat="item in menuItems">
+                <div class="padding text-center"><img class="full-image" src="{{item.imgSrc}}" ng-click="showListAccounts()"><span class="adjustWord">{{item.name}}</span></div>
+            </div>
+        </div>-->
+
+    </ion-scroll>
 </ion-content>
-<ion-footer-bar class="bar-positive">
 
-</ion-footer-bar>
+<!--<ion-footer-bar class="bar-positive">
+
+</ion-footer-bar>-->
