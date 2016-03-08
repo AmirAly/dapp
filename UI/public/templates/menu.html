@@ -1,7 +1,7 @@
 ﻿<ion-header-bar class="bar-positive">
     <button class="button button-icon icon"></button>
-    <div class="adjustHeader">
-        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()">تسجيل خروج</span>
+    <div class="adjustHeader row-center">
+        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()" class="ion-log-out button-icon icon"></span>
     </div>
 </ion-header-bar>
 <ion-content class="menuPage">
@@ -9,21 +9,23 @@
     <ion-scroll direction="y">
 
         <div class="row row-bottom padding">
-            <div class="col col-25 text-center padding"><img class="full-image" src="images/1.png" ng-click="showListPatient()"><span>المرضي</span></div>
-            <div class="col col-25 text-center padding"><img class="full-image" src="images/2.png" ng-click="showListAccounts()"><span>المساعدين</span></div>
-            <div class="col col-25 text-center padding"><img class="full-image" src="images/4.png"><span>المواعيد</span></div>
-            <div class="col col-25 text-center padding"><img class="full-image" src="images/3.png"><span>الماليات</span></div>
+            <div class="col col-33 text-center padding"><img class="full-image" src="images/1.png" ng-click="showListPatient()"><h4>المرضي</h4></div>
+            <div class="col col-33 text-center padding"><img class="full-image" src="images/2.png" ng-click="showListAccounts()"><h4>المساعدين</h4></div>
+            <div class="col col-33 text-center padding"><img class="full-image" src="images/4.png"><h4>المواعيد</h4></div>
         </div>
         <div class="row row-bottom padding">
-            <div class="col col-25 text-center padding"><img class="full-image" src="images/1.png" ng-click="showListPatient()"><span>المرضي</span></div>
-            <div class="col col-25 text-center padding"><img class="full-image" src="images/2.png" ng-click="showListAccounts()"><span>المساعدين</span></div>
-            <div class="col col-25 text-center padding"><img class="full-image" src="images/4.png"><span>المواعيد</span></div>
-            <div class="col col-25 text-center padding"><img class="full-image" src="images/3.png"><span>الماليات</span></div>
+            <div class="col col-33 text-center padding"><img class="full-image" src="images/3.png"><h4>الماليات</h4></div>
+            <div class="col col-33 text-center padding"><img class="full-image" src="images/1.png" ng-click="showListPatient()"><h4>المرضي</h4></div>
+            <div class="col col-33 text-center padding"><img class="full-image" src="images/2.png" ng-click="showListAccounts()"><h4>المساعدين</h4></div>
+        </div>
+        <div class="row row-bottom padding">
+            <div class="col col-33 text-center padding"><img class="full-image" src="images/4.png"><h4>المواعيد</h4></div>
+            <div class="col col-33 text-center padding"><img class="full-image" src="images/3.png"><h4>الماليات</h4></div>
         </div>
 
-        <!--<div class="row row-bottom adjustMenu">
-            <div class="col col-25" ng-repeat="item in menuItems">
-                <div class="padding text-center"><img class="full-image" src="{{item.imgSrc}}" ng-click="showListAccounts()"><span class="adjustWord">{{item.name}}</span></div>
+        <!--<div class="row row-bottom padding adjustMenu">
+            <div class="col col-25 text-center padding" ng-repeat="item in menuItems">
+                <img class="full-image" src="{{item.imgSrc}}" ng-click="showListPatient()"><span class="adjustWord">{{item.name}}</span>
             </div>
         </div>-->
 

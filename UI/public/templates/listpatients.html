@@ -1,60 +1,45 @@
 ﻿<ion-header-bar class="bar-positive">
     <button class="button button-icon icon ion-grid" ng-click="showMenu()"></button>
-    <div class="adjustHeader">
-        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()">تسجيل خروج</span>
+    <div class="adjustHeader row-center">
+        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()" class="ion-log-out button-icon icon"></span>
     </div>
 </ion-header-bar>
 
 <ion-content class="listPatients">
     <ion-scroll direction="y">
-        <ion-list>
+
+        <!--<ion-list>
             <ion-item class="item-input-inset">
                 <a class="button button-icon icon ion-search padding-right"></a>
                 <label class="item-input-wrapper padding-left">
-                    <input type="text" placeholder="بحث">
+                    <input type="text" placeholder="بحث" ng-model="patientName">
                 </label>
             </ion-item>
+        </ion-list>-->
+
+        <ion-list>
+            <div class="item-input-inset">
+                <a class="button button-icon icon ion-search padding-right"></a>
+                <label class="item-input-wrapper padding-left">
+                    <input type="text" placeholder="بحث" ng-model="patientName">
+                </label>
+            </div>
         </ion-list>
 
-        <div class="list">
-            <div class="card" ng-click="getPatientDetails()">
-                <div class="item item-text-wrap item-avatar">
-                    <img src="../images/unknown.png" />
-                    <h2 class="padding-bottom">علي سالم حسين</h2>
-                    <p>ارتفاع نسبه السكر في الدم ارتفاع نسبه السكر في الدم ارتفاع نسبه السكر في الدم ارتفاع نسبه السكر في الدم</p>
+            <div class="list">
+                <div class="card" ng-repeat="patient in allPatients | filter:patientName as results" ng-click="getPatientDetails()">
+                    <div class="item item-text-wrap item-avatar">
+                        <img src="../images/unknown.png" />
+                        <h2 class="padding-bottom">{{patient.name}}</h2>
+                        <p>{{patient.description}}</p>
+                    </div>
                 </div>
+            </div>
 
+            <div ng-show="!results.length" class="text-center padding">
+                <h4 class="padding">عفوا, لا يوجد مريض بهذا الاسم</h4>
             </div>
-            <div class="card" ng-click="getPatientDetails()">
-                <div class="item item-text-wrap item-avatar">
-                    <img src="../images/unknown.png" />
-                    <h2 class="padding-bottom">علي سالم حسين</h2>
-                    <p>ارتفاع نسبه السكر في الدم</p>
-                </div>
-            </div>
-            <div class="card" ng-click="getPatientDetails()">
-                <div class="item item-text-wrap item-avatar">
-                    <img src="../images/unknown.png" />
-                    <h2 class="padding-bottom">علي سالم حسين</h2>
-                    <p>ارتفاع نسبه السكر في الدم</p>
-                </div>
-            </div>
-            <div class="card" ng-click="getPatientDetails()">
-                <div class="item item-text-wrap item-avatar">
-                    <img src="../images/unknown.png" />
-                    <h2 class="padding-bottom">علي سالم حسين</h2>
-                    <p>ارتفاع نسبه السكر في الدم</p>
-                </div>
-            </div>
-            <div class="card" ng-click="getPatientDetails()">
-                <div class="item item-text-wrap item-avatar">
-                    <img src="../images/unknown.png" />
-                    <h2 class="padding-bottom">علي سالم حسين</h2>
-                    <p>ارتفاع نسبه السكر في الدم</p>
-                </div>
-            </div>
-        </div>
-    </ion-scroll>
+</ion-scroll>
 
 </ion-content>
 

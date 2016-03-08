@@ -28,12 +28,17 @@ body, input, button, textarea, span, label, p, h1, h2, h3, h4, h5, h6, select {
 .viewpatientPage h3 {
     font-size: 24px;
 }
-.adjustHeader{
+
+.adjustHeader {
     position: absolute;
     top: 10px;
     right: 10px;
     bottom: 5px;
-    font-size: 17px;
+    font-size: 20px;
+    display:flex;
+}
+.adjustHeader .ion-log-out:before{
+    font-size:26px;
 }
 
 .circle {
@@ -63,6 +68,22 @@ ion-scroll[direction=y] {
     }
 }
 
+/*login page*/
+.loginpage .view-container {
+    height: 100vh;
+    position: relative;
+}
+
+.loginpage .item.card {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+}
+
 /*list patient page*/
 .listPatients .item-avatar > img:first-child {
     right: 16px;
@@ -74,6 +95,10 @@ ion-scroll[direction=y] {
     padding-left: initial;
 }
 
+.listPatients .item-input-inset {
+    border-bottom: 1px solid #ddd;
+}
+
 /*Menu*/
 .menuPage .adjustMenu {
     flex-wrap: wrap;
@@ -82,4 +107,10 @@ ion-scroll[direction=y] {
 
 .menuPage ion-scroll[direction=y] {
     height: 100vh;
+}
+
+/*view patient*/
+.viewpatientPage .item-avatar > img:first-child {
+    right: 16px;
+    left: initial;
 }
