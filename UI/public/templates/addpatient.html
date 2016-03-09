@@ -5,39 +5,41 @@
     </div>
 </ion-header-bar>
 
-<ion-content>
+<ion-content class="addPatientPage">
     <ion-scroll direction="y">
-        <div class="padding row row-center">
-            <div class="col text-center">
-                <img class="circle" ng-src="../images/unknown.png" />
+
+        <form>
+            <div class="padding row row-center">
+                <div class="col text-center">
+                    <img class="circle" ng-src="../images/unknown.png" />
+                </div>
             </div>
-        </div>
 
+            <div class="list">
+                <label class="item item-input item-floating-label padding">
+                    <span class="input-label">اسم المريض</span>
+                    <input type="text" name="txtPatientName" ng-model="patientName" placeholder="اسم المريض" required>
+                </label>
+                <label class="item item-input item-floating-label padding">
+                    <span class="input-label">وصف الحالة</span>
+                    <textarea type="text" name="txtDescription" ng-model="description" rows="5" placeholder="وصف الحالة" required></textarea>
+                </label>
+                <label class="item item-input item-stacked-label padding">
+                    <span class="input-label">تاريخ الميلاد</span>
+                    <input type="text" name="txtDob" ng-model="dateOfBirth" pattern=".{1,80}" id="txtDob" class="text-right" required readonly placeholder="تاريخ الميلاد">
+                </label>
 
-        <div class="list">
-            <label class="item item-input item-floating-label padding">
-                <span class="input-label">اسم المريض</span>
-                <input type="text" placeholder="اسم المريض">
-            </label>
-            <label class="item item-input item-floating-label padding">
-                <span class="input-label">وصف الحالة</span>
-                <textarea type="text" rows="5" placeholder="وصف الحالة"></textarea>
-            </label>
-            <label class="item item-input item-stacked-label padding">
-                <span class="input-label">تاريخ الميلاد</span>
-                <input type="date" class="text-right" placeholder="تاريخ الميلاد">
-            </label>
+                <label class="item item-input item-stacked-label padding">
+                    <span class="input-label">النوع</span>
+                    <select name="cmbGender" ng-model="gender" required>
+                        <option selected>ذكر</option>
+                        <option>انثي</option>
+                    </select>
+                </label>
 
-            <label class="item item-input item-stacked-label padding">
-                <span class="input-label">النوع</span>
-                <select>
-                    <option selected>ذكر</option>
-                    <option>انثي</option>
-                </select>
-            </label>
-
-        </div>
-        <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </form>
     </ion-scroll>
 </ion-content>
 
@@ -45,6 +47,6 @@
 <ion-footer-bar class="bar-positive">
     <div class="button-bar">
         <button class="button button-icon icon ion-close-round" ng-click="showAccounts()"></button>
-        <button class="button button-icon icon ion-checkmark-round" ng-click="showAccounts()"></button>
+        <button type="submit" class="button button-icon icon ion-checkmark-round" ng-click="showAccounts()"></button>
     </div>
 </ion-footer-bar>

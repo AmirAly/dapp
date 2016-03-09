@@ -35,11 +35,12 @@ body, input, button, textarea, span, label, p, h1, h2, h3, h4, h5, h6, select {
     right: 10px;
     bottom: 5px;
     font-size: 20px;
-    display:flex;
+    display: flex;
 }
-.adjustHeader .ion-log-out:before{
-    font-size:26px;
-}
+
+    .adjustHeader .ion-log-out:before, .adjustHeader .ion-chevron-left:before {
+        font-size: 26px;
+    }
 
 .circle {
     max-width: 100%;
@@ -57,6 +58,15 @@ textarea {
     resize: none;
 }
 
+.spacer {
+    height: 30px;
+}
+
+.appColor, .bar-positive {
+    background-color: #547c89 !important;
+    border-color: #456670 !important;
+}
+
 ion-scroll[direction=y] {
     height: calc(100vh - 33px - 33px - 15px);
 }
@@ -67,6 +77,8 @@ ion-scroll[direction=y] {
         overflow-y: scroll !important;
     }
 }
+
+
 
 /*login page*/
 .loginpage .view-container {
@@ -82,6 +94,11 @@ ion-scroll[direction=y] {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     width: 95%;
+}
+
+.loginpage img {
+    max-width: 250px !important;
+    max-height: 250px !important;
 }
 
 /*list patient page*/
@@ -109,8 +126,37 @@ ion-scroll[direction=y] {
     height: 100vh;
 }
 
+.menuPage h3 {
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.menuPage img {
+    width: 90%;
+}
+
 /*view patient*/
 .viewpatientPage .item-avatar > img:first-child {
     right: 16px;
     left: initial;
 }
+
+/*add Patient Page*/
+.addPatientPage .Zebra_DatePicker_Icon {
+    left: 0px !important;
+    right: auto !important;
+}
+
+.addPatientPage input {
+    background-color: #fff;
+}
+
+/*.addPatientPage form.ng-pristine label.item-input {
+    background-color: lightblue;
+}
+
+.addPatientPage form.ng-dirty label.item-input {
+    background-color: pink;
+}*/
