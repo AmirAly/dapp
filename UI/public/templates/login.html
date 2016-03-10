@@ -1,33 +1,50 @@
-﻿<!--<ion-view view-title="login" class="loginPage">-->
+﻿<!--<ion-view view-title="frmLogin" class="loginPage">-->
 <ion-content class="loginpage">
 
     <div class="view-container">
         <div class="padding">
-            <div class="item card">
-                <div class="col col-center">
-                    <div class="item item-image">
-                        <img ng-src="images/logo1.png">
+            <form novalidate name="frmLogin" ng-submit="submitForm(frmLogin)">
+                <div class="item card">
+                    <div class="col col-center">
+                        <div class="item item-image">
+                            <img ng-src="images/logo1.png">
+                        </div>
                     </div>
-                </div>
-                <label class="item item-input item-floating-label">
-                    <span class="input-label ">اسم المستخدم</span>
-                    <input type="text" placeholder="اسم المستخدم">
-                </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label ">اسم المستخدم</span>
+                        <input ng-model="email" type="email" required class="form-control" placeholder="اسم المستخدم" name="txtEmail" id="txtEmail">
+                        <span ng-show="frmLogin.txtEmail.$dirty && frmLogin.txtEmail.$invalid">
+                            <span class="errorFont" ng-show="frmLogin.txtEmail.$error.required">مطلوب</span>
+                            <span class="errorFont" ng-show="frmLogin.txtEmail.$error.email">صيغه بريد الكترونى غير صحيحة</span>
+                        </span>
+                        <!--<span class="errorFont" ng-hide="frmLogin.txtEmail.$error.required || frmLogin.txtEmail.$error.email">{{afterLoginError}}</span>-->
+                        
+                    </label>
 
-                <label class="item item-input item-floating-label">
-                    <span class="input-label ">كلمة المرور</span>
-                    <input type="password" placeholder="كلمة المرور">
-                </label>
-                <div class="row">
-                    <div class="col col-center text-center">
-                        <button class="button button-block button-balanced appColor" ng-click="login()">
-                            تسجيل الدخول
-                        </button>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label ">كلمة المرور</span>
+                        <input ng-model="password" type="password" required class="form-control" placeholder="كلمة المرور" name="txtPassword" id="txtPassword">
+                        <span ng-show="frmLogin.txtPassword.$dirty && frmLogin.txtPassword.$invalid">
+                            <span class="errorFont" ng-show="frmLogin.txtPassword.$error.required">مطلوب</span>
+                        </span>
+
+                    </label>
+                    <div class="row">
+                        <div class="col col-center text-center">
+                            <button class="button button-block button-balanced appColor" ng-disabled="frmLogin.$invalid" type="submit">
+                                تسجيل الدخول
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
+
+            
+
         </div>
     </div>
 
+
+    
 </ion-content>
 <!--</ion-view>-->

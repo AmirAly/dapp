@@ -22,6 +22,8 @@
         $state.go('addpatient');
     }
     $scope.logout = function () {
-        $state.go('login');
+       // $state.go('login', {}, { reload: true });
+        window.location = '#/login';
+
     }
 });

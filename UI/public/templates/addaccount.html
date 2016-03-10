@@ -4,41 +4,58 @@
         <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()" class="ion-log-out button-icon icon"></span>
     </div>
 </ion-header-bar>
-
-    <ion-content>
+<form name="frmAddAccount" novalidate ng-submit="addAccount(frmAddAccount)">
+    <ion-content class="addAccountPage">
         <ion-scroll direction="y">
+
             <div class="padding row row-center">
                 <div class="col text-center">
-                    <img class="circle" ng-src="../images/unknown.png" />
+                    <img class="circle" ng-src="images/unknown.png" />
                 </div>
             </div>
 
             <div class="list">
                 <label class="item item-input item-floating-label padding">
-                    <span class="input-label">البريد الاكترونى</span>
-                    <input type="email" placeholder="البريد الالكترونى">
+                    <span class="input-label">البريد الالكترونى</span>
+                    <input ng-model="email" type="email" required class="form-control" placeholder="البريد الالكترونى" name="txtEmail" id="txtEmail">
+                    <span ng-show="frmAddAccount.txtEmail.$dirty && frmAddAccount.txtEmail.$invalid">
+                        <span class="errorFont" ng-show="frmAddAccount.txtEmail.$error.required">مطلوب</span>
+                        <span class="errorFont" ng-show="frmAddAccount.txtEmail.$error.email">صيغه بريد الكترونى غير صحيحة</span>
+                    </span>
                 </label>
                 <label class="item item-input item-floating-label padding">
                     <span class="input-label">اسم المساعد</span>
-                    <input type="text" placeholder="اسم المساعد">
+                    <input ng-model="helperName" type="text" required class="form-control" placeholder="اسم المساعد" name="txtHelperName" id="txtHelperName">
+                    <span ng-show="frmAddAccount.txtHelperName.$dirty && frmAddAccount.txtHelperName.$invalid">
+                        <span class="errorFont" ng-show="frmAddAccount.txtHelperName.$error.required">مطلوب</span>
+                    </span>
                 </label>
                 <label class="item item-input item-floating-label padding">
                     <span class="input-label">التخصص</span>
-                    <input type="text" placeholder="التخصص">
+                    <input ng-model="specialization" type="text" required class="form-control" placeholder="التخصص" name="txtSpecialization" id="txtSpecialization">
+                    <span ng-show="frmAddAccount.txtSpecialization.$dirty && frmAddAccount.txtSpecialization.$invalid">
+                        <span class="errorFont" ng-show="frmAddAccount.txtSpecialization.$error.required">مطلوب</span>
+                    </span>
                 </label>
                 <label class="item item-input item-floating-label padding">
                     <span class="input-label">كلمة المرور</span>
-                    <input type="password" placeholder="كلمة المرور">
+                    <input ng-model="password" type="password" required class="form-control" placeholder="كلمة المرور" name="txtPassword" id="txtPassword">
+                    <span ng-show="frmAddAccount.txtPassword.$dirty && frmAddAccount.txtPassword.$invalid">
+                        <span class="errorFont" ng-show="frmAddAccount.txtPassword.$error.required">مطلوب</span>
+                    </span>
                 </label>
 
             </div>
+
+            <div class="spacer"></div>
         </ion-scroll>
     </ion-content>
 
 
     <ion-footer-bar class="bar-positive">
         <div class="button-bar">
-            <button class="button button-icon icon ion-close-round" ng-click="showAccounts()"></button>
-            <button class="button button-icon icon ion-checkmark-round" ng-click="showAccounts()"></button>
+            <button class="button button-icon icon ion-close-round" type="reset" ng-click="showAccounts()"></button>
+            <button class="button button-icon icon ion-checkmark-round" type="submit"></button>
         </div>
     </ion-footer-bar>
+</form>

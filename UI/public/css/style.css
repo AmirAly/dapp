@@ -153,10 +153,22 @@ ion-scroll[direction=y] {
     background-color: #fff;
 }
 
-/*.addPatientPage form.ng-pristine label.item-input {
-    background-color: lightblue;
+
+.loginpage .ng-invalid.ng-dirty, .loginpage .ng-invalid.ng-touched,
+.addAccountPage .ng-invalid.ng-dirty, .addAccountPage .ng-invalid.ng-touched,
+.addPatientPage .ng-invalid.ng-dirty, .addPatientPage .ng-invalid.ng-touched {
+    border-bottom: 3px solid #B83E2C;
 }
 
-.addPatientPage form.ng-dirty label.item-input {
-    background-color: pink;
-}*/
+.loginpage .errorFont,
+.addAccountPage .errorFont,
+.addPatientPage .errorFont {
+    color: #e42112;
+    padding-right: 44px;
+}
+
+.loginpage .ng-valid.ng-dirty:not(form),
+.addAccountPage .ng-valid.ng-dirty:not(form),
+.addPatientPage .ng-valid.ng-dirty:not(form) {
+    border-bottom: 3px solid green;
+}

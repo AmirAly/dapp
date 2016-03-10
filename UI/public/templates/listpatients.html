@@ -1,9 +1,10 @@
 ﻿<ion-header-bar class="bar-positive">
     <button class="button button-icon icon ion-grid" ng-click="showMenu()"></button>
     <div class="adjustHeader row-center">
-        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()" class="ion-log-out button-icon icon"></span>
+        <span>Amir</span>&nbsp;|&nbsp;<span ng-click="logout()"  class="ion-log-out button-icon icon"></span>
     </div>
 </ion-header-bar>
+
 
 <ion-content class="listPatients">
     <ion-scroll direction="y">
@@ -29,7 +30,7 @@
             <div class="list">
                 <div class="card" ng-repeat="patient in allPatients | filter:patientName as results" ng-click="getPatientDetails()">
                     <div class="item item-text-wrap item-avatar">
-                        <img src="../images/unknown.png" />
+                        <img src="images/unknown.png" />
                         <h2 class="padding-bottom">{{patient.name}}</h2>
                         <p>{{patient.description}}</p>
                     </div>

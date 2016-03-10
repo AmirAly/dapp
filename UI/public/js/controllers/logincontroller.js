@@ -1,7 +1,13 @@
-﻿doctorApp.controller("LoginController", function ($scope, $state) {
+﻿doctorApp.controller("LoginController", function ($scope, $state , $timeout) {
+    
+    $scope.email = '';
+    $scope.password = '';
+    $scope.submitForm = function (form) {
+        if (form.$valid) {
 
-    $scope.login = function () {
-        $state.go('listpatients');
+            $state.go('listpatients');
+        }
+
     }
 });
 

@@ -4,11 +4,33 @@
     $scope.showMenu = function () {
         $state.go('menu');
     }
-    $scope.showAccounts = function () {
+    $scope.showPatients = function () {
         $state.go('listpatients');
     }
     $scope.logout = function () {
         $state.go('login');
+    }
+    $scope.gender = 'male';
+    $scope.txtDobRequired = false;
+
+    $scope.addPatient = function (form) {
+        angular.forEach($scope.frmAddPatient.$error.required, function (field) {
+            field.$setDirty();
+        });
+        if ($scope.dateOfBirth == null || $scope.dateOfBirth == "") {
+            $scope.txtDobRequired = true;
+            console.log('dob null')
+        }
+        else {
+            $scope.txtDobRequired = false;
+            console.log('dob val');
+            if (form.$valid) {
+                console.log('valid');
+                $state.go('listpatients');
+                
+            }
+        }
+
     }
 
     $(document).on('click', '#txtDob', function (event) {
@@ -32,6 +54,7 @@
                 $(this).css({
                     'border-bottom': '2px solid #4fc24f'
                 });
+                $scope.txtDobRequired = false;
             },
             onClear: function (view, elements) {
                 $('.Zebra_DatePicker_Icon_Wrapper ~ label').css({
@@ -40,6 +63,7 @@
                 $(this).css({
                     'border-bottom': '2px solid red'
                 });
+
             },
         });
         if ($('#txtDob').val()) {
