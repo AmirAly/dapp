@@ -28,6 +28,13 @@
             console.log('dob val');
             if (form.$valid) {
                 console.log('valid');
+                $scope.patientName = '';
+                $scope.dateOfBirth = '';
+                $scope.description = '';
+                $scope.gender = 'male';
+                $scope.frmAddPatient.$setPristine();
+                $scope.frmAddPatient.$setUntouched();
+                $scope.frmAddPatient.$setValidity();
                 $state.go('listpatients');
             }
         }

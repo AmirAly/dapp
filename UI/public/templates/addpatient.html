@@ -22,6 +22,11 @@
                         <span class="errorFont" ng-show="frmAddPatient.txtPatientName.$error.required">مطلوب</span>
                     </span>
                 </label>
+                <label class="item item-input item-stacked-label padding">
+                    <span class="input-label">تاريخ الميلاد</span>
+                    <input type="text" name="txtDob" ng-model="dateOfBirth" id="txtDob" class="text-right" readonly placeholder="تاريخ الميلاد">
+                    <span class="errorFont" ng-show="txtDobRequired" ng-hide="!txtDobRequired">مطلوب</span>
+                </label>
                 <label class="item item-input item-floating-label padding">
                     <span class="input-label">وصف الحالة</span>
                     <textarea name="txtDescription" ng-model="description" rows="5" type="text" required placeholder="وصف الحالة"></textarea>
@@ -29,11 +34,7 @@
                         <span class="errorFont" ng-show="frmAddPatient.txtDescription.$error.required">مطلوب</span>
                     </span>
                 </label>
-                <label class="item item-input item-stacked-label padding">
-                    <span class="input-label">تاريخ الميلاد</span>
-                    <input type="text" name="txtDob" ng-model="dateOfBirth" id="txtDob" class="text-right" readonly placeholder="تاريخ الميلاد">
-                    <span class="errorFont" ng-show="txtDobRequired" ng-hide="!txtDobRequired">مطلوب</span>
-                </label>
+                
 
                 <label class="item item-input item-stacked-label padding">
                     <span class="input-label">النوع</span>

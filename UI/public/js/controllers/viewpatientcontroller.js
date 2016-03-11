@@ -18,7 +18,7 @@
             $scope.frmAddNote.note = '';
             $scope.frmAddNote.$setPristine();
             $scope.frmAddNote.$setUntouched();
-
+            $scope.frmAddNote.$setValidity();
             $scope.addNote = !addNote;
             
         }
