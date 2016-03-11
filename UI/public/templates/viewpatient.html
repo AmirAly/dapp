@@ -62,45 +62,51 @@
         </div>
     </ion-footer-bar>
 
-
-    <ion-content ng-show="addNote">
-        <ion-scroll direction="y">
-            <div class="padding row row-center">
-                <div class="col-80">
-                    <h3 class="padding-bottom">علي سالم حسين</h3>
-                    <p>ارتفاع نسبه السكر في الدم</p>
-                </div>
-                <div class="col-20">
-                    <div class="item-avatar">
-                        <img src="images/unknown.png" />
+    <form name="frmAddNote" novalidate ng-submit="addNewNote(frmAddNote)">
+        <ion-content ng-show="addNote">
+            <ion-scroll direction="y">
+                <div class="padding row row-center">
+                    <div class="col-80">
+                        <h3 class="padding-bottom">علي سالم حسين</h3>
+                        <p>ارتفاع نسبه السكر في الدم</p>
                     </div>
-                </div>
-                
-            </div>
-
-            <div class="view-container">
-                <div class="item card">
-
-                    <label class="item item-input item-floating-label">
-                        <span class="input-label">ملاحظة</span>
-                        <textarea type="text" rows="5" placeholder="ملاحظة"></textarea>
-                    </label>
-
-                    <div class="row row-center">
-                        <div class="col">
-                            <button class="button button-icon icon ion-paperclip button-block"></button>
+                    <div class="col-20">
+                        <div class="item-avatar">
+                            <img src="images/unknown.png" />
                         </div>
                     </div>
+
                 </div>
 
-            </div>
-        </ion-scroll>
-    </ion-content>
+                <div class="view-container">
+                    <div class="item card">
 
-    <ion-footer-bar class="bar-positive" ng-show="addNote">
-        <div class="button-bar">
-            <button class="button button-icon icon ion-close-round" ng-click="addNote = !addNote"></button>
-            <button class="button button-icon icon ion-checkmark-round" ng-click="addNote = !addNote"></button>
-        </div>
-    </ion-footer-bar>
+                        <label class="item item-input item-floating-label">
+                            <span class="input-label">ملاحظة</span>
+                            <textarea name="txtNote" ng-model="frmAddNote.note" rows="5" type="text" required placeholder="ملاحظة"></textarea>
+                            <span ng-show="frmAddNote.txtNote.$dirty && frmAddNote.txtNote.$invalid">
+                                <span class="errorFont" ng-show="frmAddNote.txtNote.$error.required">مطلوب</span>
+                            </span>
+                        </label>
+
+                        <div class="row row-center">
+                            <div class="col">
+                                <button class="button button-icon icon ion-paperclip button-block"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </ion-scroll>
+        </ion-content>
+
+        <ion-footer-bar class="bar-positive" ng-show="addNote">
+            <div class="button-bar">
+                <button class="button button-icon icon ion-close-round" type="reset" ng-click="addNote = !addNote"></button>
+                <button class="button button-icon icon ion-checkmark-round" type="submit"></button>
+            </div>
+        </ion-footer-bar>
+    </form>
+
+
 </div>

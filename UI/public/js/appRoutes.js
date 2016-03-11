@@ -55,10 +55,7 @@ doctorApp.config(function ($stateProvider, $urlRouterProvider) {
         controller: "addpatientController",
         templateUrl: 'templates/addpatient.html'
     })
-    //// ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        //.state('about', {
-        //    // we'll get to this in a bit       
-        //})
+
     ;
 
 })

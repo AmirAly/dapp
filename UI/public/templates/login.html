@@ -1,9 +1,10 @@
 ﻿<!--<ion-view view-title="frmLogin" class="loginPage">-->
-<ion-content class="loginpage">
+<form novalidate name="frmLogin" ng-submit="submitForm(frmLogin)">
+    <ion-content class="loginpage">
 
-    <div class="view-container">
-        <div class="padding">
-            <form novalidate name="frmLogin" ng-submit="submitForm(frmLogin)">
+        <div class="view-container">
+            <div class="padding">
+
                 <div class="item card">
                     <div class="col col-center">
                         <div class="item item-image">
@@ -12,18 +13,18 @@
                     </div>
                     <label class="item item-input item-floating-label">
                         <span class="input-label ">اسم المستخدم</span>
-                        <input ng-model="email" type="email" required class="form-control" placeholder="اسم المستخدم" name="txtEmail" id="txtEmail">
+                        <input ng-model="frmLogin.mail" type="email" required  placeholder="اسم المستخدم" name="txtEmail" id="txtEmail">
                         <span ng-show="frmLogin.txtEmail.$dirty && frmLogin.txtEmail.$invalid">
                             <span class="errorFont" ng-show="frmLogin.txtEmail.$error.required">مطلوب</span>
                             <span class="errorFont" ng-show="frmLogin.txtEmail.$error.email">صيغه بريد الكترونى غير صحيحة</span>
                         </span>
                         <!--<span class="errorFont" ng-hide="frmLogin.txtEmail.$error.required || frmLogin.txtEmail.$error.email">{{afterLoginError}}</span>-->
-                        
+
                     </label>
 
                     <label class="item item-input item-floating-label">
                         <span class="input-label ">كلمة المرور</span>
-                        <input ng-model="password" type="password" required class="form-control" placeholder="كلمة المرور" name="txtPassword" id="txtPassword">
+                        <input ng-model="frmLogin.password" type="password" required  placeholder="كلمة المرور" name="txtPassword" id="txtPassword">
                         <span ng-show="frmLogin.txtPassword.$dirty && frmLogin.txtPassword.$invalid">
                             <span class="errorFont" ng-show="frmLogin.txtPassword.$error.required">مطلوب</span>
                         </span>
@@ -37,14 +38,15 @@
                         </div>
                     </div>
                 </div>
-            </form>
 
-            
 
+
+
+            </div>
         </div>
-    </div>
 
 
-    
-</ion-content>
+
+    </ion-content>
+</form>
 <!--</ion-view>-->

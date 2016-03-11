@@ -14,12 +14,14 @@
     $scope.txtDobRequired = false;
 
     $scope.addPatient = function (form) {
+        console.log($('#txtDob').val());
         angular.forEach($scope.frmAddPatient.$error.required, function (field) {
             field.$setDirty();
         });
-        if ($scope.dateOfBirth == null || $scope.dateOfBirth == "") {
+        if (!($('#txtDob').val())) {
             $scope.txtDobRequired = true;
-            console.log('dob null')
+            $('#txtDob').attr('style', 'border-bottom:2px solid red');
+            console.log('dob null');
         }
         else {
             $scope.txtDobRequired = false;
@@ -27,7 +29,6 @@
             if (form.$valid) {
                 console.log('valid');
                 $state.go('listpatients');
-                
             }
         }
 
@@ -63,7 +64,7 @@
                 $(this).css({
                     'border-bottom': '2px solid red'
                 });
-
+                $scope.txtDobRequired = true;
             },
         });
         if ($('#txtDob').val()) {
