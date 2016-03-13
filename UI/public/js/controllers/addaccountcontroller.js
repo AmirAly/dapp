@@ -8,6 +8,9 @@
         });
 
         if (form.$valid) {
+            $scope.frmAddAccount.$setPristine();
+            $scope.frmAddAccount.$setUntouched();
+            $scope.frmAddAccount.$setValidity();
             $state.go('listpatients');
         }
     }
